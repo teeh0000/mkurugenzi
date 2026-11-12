@@ -1,0 +1,29 @@
+/* Mkurugenzi footer v2. Link footer.css after shop.css on every page. */
+.ft{
+  --ft-brown:#5C4033; --ft-esp:#2E2019; --ft-ecru:#C2B280; --ft-cream:#F6F1E4; --ft-org:#B5651D;
+  margin:56px 0 0; padding:0 22px calc(26px + env(safe-area-inset-bottom,0px));
+  background:var(--ft-brown); color:var(--ft-cream); font-family:"Inter",system-ui,sans-serif; text-align:center;
+  position:relative;
+}
+.ft-logo{padding:46px 0 10px}
+.ft-logo img{display:block;margin:0 auto;width:82%;max-width:360px;height:auto}
+.ft-tag{margin:18px auto 0;max-width:30ch;font-family:"Montserrat","Inter",sans-serif;font-weight:500;font-style:normal;text-transform:none;letter-spacing:0;line-height:1.6;font-size:1.2rem;color:rgba(246,241,228,.92)}
+.ft-cta{margin:30px 0 8px;font:800 1.7rem/1.15 "Montserrat",sans-serif;letter-spacing:-.01em;color:var(--ft-cream)}
+.ft-cta span{display:inline-block;background:var(--ft-ecru);color:var(--ft-brown);padding:2px 12px 4px;border-radius:8px;transform:rotate(-1.5deg)}
+.ft-links{list-style:none;margin:28px 0 0;padding:0;text-align:left}
+.ft-links li{border-top:1px dashed rgba(246,241,228,.3)}
+.ft-links li:last-child{border-bottom:1px dashed rgba(246,241,228,.3)}
+.ft-links a{display:block;padding:18px 4px;color:var(--ft-cream);text-decoration:none;
+  font:600 1.05rem/1 "Inter",sans-serif;letter-spacing:.08em;text-transform:uppercase;transition:padding .2s,color .2s}
+.ft-links a:hover,.ft-links a:focus-visible{padding-left:12px;color:var(--ft-ecru);outline:none}
+.ft-links a[aria-current="page"]{color:var(--ft-ecru)}
+.ft-follow{margin:32px 0 14px;font:800 .8rem/1 "Montserrat",sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--ft-ecru)}
+.ft .ft-social{list-style:none;margin:0;padding:0;display:flex;justify-content:center;gap:30px}
+.ft-social a{display:block;line-height:0;transition:transform .2s,opacity .2s}
+.ft-social a:hover,.ft-social a:focus-visible{transform:translateY(-3px);opacity:.8;outline:none}
+/* turns the white PNG icons ecru (#C2B280) */
+.ft-social img{width:36px;height:36px;object-fit:contain;display:block;
+  filter:brightness(0) saturate(100%) invert(75%) sepia(77%) saturate(457%) hue-rotate(321deg) brightness(126%) contrast(52%)}
+.ft-bottom{margin-top:30px;padding-top:18px;border-top:1px solid rgba(246,241,228,.18);font-size:.85rem;color:rgba(246,241,228,.65)}
+.ft-bottom b{color:var(--ft-ecru);font-weight:600}
+@media (prefers-reduced-motion:reduce){.ft *{transition:none!important}}

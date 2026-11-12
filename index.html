@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mkurugenzi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&family=Montserrat:wght@400;500;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="crate.css">
+<link rel="stylesheet" href="shop.css">
+<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="contact.css">
+<style>
+  /* Montserrat (same font as the headline) for the hero description and the "Pick your lane" line */
+  .hero p,
+  .col-head p {
+    font-family: "Montserrat", "Inter", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: none;
+    letter-spacing: 0;
+    line-height: 1.6;
+    font-size: 1.2rem;
+  }
+</style>
+</head>
+<body>
+<button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+<a class="cart" href="#cart" data-crate-open aria-label="Open crate"><img src="images/cart.png" alt=""></a>
+
+<div class="app">
+  <header class="bar"><img src="images/logo-cream.png" alt="Mkurugenzi"></header>
+  <main class="hero">
+    <h1>More than just a brand.<br><span class="hl">Join the</span><br><span class="hl">movement.</span></h1>
+    <p>Discover our Gents, Ladies and Unisex collections: quality pieces made to help you stand out and stay true to who you are.</p>
+    <a class="btn" href="#collections">Shop collections &rarr;</a>
+  </main>
+  <section class="slider" aria-label="Featured looks" aria-roledescription="carousel">
+    <!-- Add more slides by copying an <img> line. Dots appear automatically. -->
+    <img class="slide is-active" src="images/slide1.jpg" alt="Featured look 1">
+    <img class="slide" src="images/slide2.jpg" alt="Featured look 2" loading="lazy">
+    <img class="slide" src="images/slide3.jpg" alt="Featured look 3" loading="lazy">
+    <img class="slide" src="images/slide4.jpg" alt="Featured look 4" loading="lazy">
+    <div class="dots"></div>
+  </section>
+
+  <!-- Collections: each card leads to its own page. Put your photos in images/ as cat-ladies.jpg, cat-gents.jpg, cat-unisex.jpg -->
+  <section class="collections" id="collections" aria-labelledby="col-title">
+    <div class="col-head">
+      <h2 id="col-title">Shop by <span class="hl">collection</span></h2>
+      <p>Pick your lane. Every collection has its own page of pieces.</p>
+    </div>
+    <a class="cat" href="ladies.html" style="--img:url(images/cat-ladies.jpg)" aria-label="View the Ladies collection">
+      <div class="cat-row">
+        <div><h3><span class="hl">Ladies</span></h3><p>Bold cuts, soft fits.</p></div>
+        <span class="cat-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </a>
+    <a class="cat" href="gents.html" style="--img:url(images/cat-gents.jpg)" aria-label="View the Gents collection">
+      <div class="cat-row">
+        <div><h3><span class="hl">Gents</span></h3><p>Clean lines, strong presence.</p></div>
+        <span class="cat-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </a>
+    <a class="cat" href="unisex.html" style="--img:url(images/cat-unisex.jpg)" aria-label="View the Unisex collection">
+      <div class="cat-row">
+        <div><h3><span class="hl">Unisex</span></h3><p>One fit for every one of you.</p></div>
+        <span class="cat-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </a>
+  </section>
+
+  <!-- GET IN TOUCH -->
+  <section class="cx" id="contact" aria-labelledby="cx-title">
+    <h2 class="cx-title" id="cx-title"><span class="w"><span>Get in</span></span> <span class="w"><span><em>touch.</em></span></span></h2>
+
+    <div class="gt-info">
+      <a class="gt-item rv" href="https://wa.me/254716265661" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+        <small><svg class="gt-ic wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"/><path d="M9.2 8.6c.2 2.4 2.3 4.5 4.7 4.8l1.2-1.2-1.7-1-.8.7a3.8 3.8 0 0 1-1.7-1.7l.7-.8-1-1.7z"/></svg>WhatsApp</small>
+        <strong class="gt-mark"><span>+254 716 265 661</span></strong>
+      </a>
+      <a class="gt-item rv" href="mailto:info@mkurugenzi.co.ke" aria-label="Send us an email">
+        <small><svg class="gt-ic ml" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>Email us</small>
+        <strong class="gt-mark"><span>info@mkurugenzi.co.ke</span></strong>
+      </a>
+      <div class="gt-item rv">
+        <small>Service time</small>
+        <ul class="cx-hours">
+          <li style="--i:0"><span>Monday &ndash; Friday</span><b>9 am to 6 pm</b></li>
+          <li style="--i:1"><span>Saturday</span><b>9 am to 12 pm</b></li>
+          <li style="--i:2"><span>Sunday</span><b class="cx-closed">Closed</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <form class="cx-form rv" id="cx-form" novalidate>
+      <h3>Send us a message</h3>
+      <p class="cx-sub">Fill this in and we will pick it up from there.</p>
+      <div class="cx-prog" aria-hidden="true"><i></i></div>
+      <div class="cx-fields">
+        <label class="fld"><input id="f-name" type="text" placeholder=" " autocomplete="name"><span>Name*</span><em class="err" role="alert"></em></label>
+        <label class="fld"><input id="f-phone" type="tel" placeholder=" " autocomplete="tel" inputmode="tel"><span>Phone Number*</span><em class="err" role="alert"></em></label>
+        <label class="fld"><input id="f-email" type="email" placeholder=" " autocomplete="email"><span>Email*</span><em class="err" role="alert"></em></label>
+        <label class="fld"><textarea id="f-msg" placeholder=" " rows="3"></textarea><span>Message</span></label>
+        <p class="seg-l">Send it through</p>
+        <div class="seg" id="cx-seg" data-v="wa"><i></i>
+          <button type="button" data-via="wa" aria-pressed="true">WhatsApp</button>
+          <button type="button" data-via="email" aria-pressed="false">Email</button>
+        </div>
+        <button class="send" type="submit"><span class="tx">Send message</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg></button>
+      </div>
+      <div class="cx-done" role="status">
+        <svg viewBox="0 0 96 96" aria-hidden="true"><circle cx="48" cy="48" r="30"/><path d="M36 49l9 9 16-18"/></svg>
+        <h4>Message ready!</h4>
+        <p>We opened <b id="cx-via">WhatsApp</b> with your message. Just press send there.</p>
+        <a id="cx-open" href="#">Open it again</a><button type="button" id="cx-again">New message</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="ft">
+    <div class="ft-logo"><img src="images/logo-cream.png" alt="Mkurugenzi"></div>
+    <p class="ft-tag">Quality pieces made to help you stand out and stay true to who you are.</p>
+    <h2 class="ft-cta"><span>Join the movement.</span></h2>
+    <ul class="ft-links">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="gents.html">Gents</a></li>
+      <li><a href="ladies.html">Ladies</a></li>
+      <li><a href="unisex.html">Unisex</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+    <p class="ft-follow">Follow us</p>
+    <!-- Add your phone number / email here when you are ready -->
+    <ul class="ft-social">
+      <li><a href="https://www.youtube.com/@Mkurugenziii" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><img src="images/youtube.png" alt=""></a></li>
+      <li><a href="https://web.facebook.com/Mkurugenziii" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><img src="images/facebook.png" alt=""></a></li>
+      <li><a href="https://www.instagram.com/abelmutua" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="images/instagram.png" alt=""></a></li>
+    </ul>
+    <div class="ft-bottom">&copy; 2026 <b>Mkurugenzi</b>. All rights reserved.</div>
+  </footer>
+</div>
+
+<div class="stage" id="stage">
+  <div class="scrim" id="scrim"></div>
+  <nav class="drawer" id="menu" aria-label="Main menu">
+    <div class="drawer-head"><img src="images/logo-brown.png" alt="Mkurugenzi"></div>
+    <ul class="nav">
+      <li style="--i:0"><div class="row"><a class="top" href="index.html" aria-current="page"><span class="ico"><img src="images/home.png" alt=""></span>Home</a></div></li>
+      <li class="has-sub" style="--i:1">
+        <div class="row">
+          <a class="top" href="index.html#collections"><span class="ico"><img src="images/collections.png" alt=""></span>Collections</a>
+          <button class="sub-toggle" type="button" aria-expanded="false" aria-controls="sub-collections" aria-label="Show collections"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        </div>
+        <div class="sub" id="sub-collections">
+          <ul>
+            <li><a href="gents.html"><span class="ico"><img src="images/gents.png" alt=""></span>Gents</a></li>
+            <li><a href="ladies.html"><span class="ico"><img src="images/ladies.png" alt=""></span>Ladies</a></li>
+            <li><a href="unisex.html"><span class="ico"><img src="images/unisex.png" alt=""></span>Unisex</a></li>
+          </ul>
+        </div>
+      </li>
+      <li style="--i:2"><div class="row"><a class="top" href="#contact"><span class="ico"><img src="images/contactus.png" alt=""></span>Contact Us</a></div></li>
+    </ul>
+    <div class="drawer-foot">
+      <ul class="socials"><li><a href="https://www.youtube.com/@Mkurugenziii" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><img src="images/youtube.png" alt=""></a></li><li><a href="https://web.facebook.com/Mkurugenziii" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><img src="images/facebook.png" alt=""></a></li><li><a href="https://www.instagram.com/abelmutua" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="images/instagram.png" alt=""></a></li></ul>
+    </div>
+  </nav>
+</div>
+<script src="script.js"></script>
+<script src="crate.js"></script>
+<script src="shop.js"></script>
+<script src="contact.js"></script>
+</body>
+</html>

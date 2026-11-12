@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mkurugenzi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&family=Montserrat:wght@400;500;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="crate.css">
+</head>
+<body>
+<button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+<a class="cart" href="#cart" data-crate-open aria-label="Open crate"><img src="images/cart.png" alt=""></a>
+
+<div class="app">
+  <header class="bar"><img src="images/logo-cream.png" alt="Mkurugenzi"></header>
+  <main class="hero">
+    <h1>More than just a brand.<br><span class="hl">Join the</span><br><span class="hl">movement.</span></h1>
+    <p>Discover our Gents, Ladies and Unisex collections: quality pieces made to help you stand out and stay true to who you are.</p>
+    <a class="btn" href="#collections">Shop collections &rarr;</a>
+  </main>
+  <section class="slider" aria-label="Featured looks" aria-roledescription="carousel">
+    <!-- Add more slides by copying an <img> line. Dots appear automatically. -->
+    <img class="slide is-active" src="images/slide1.jpg" alt="Featured look 1">
+    <img class="slide" src="images/slide2.jpg" alt="Featured look 2" loading="lazy">
+    <img class="slide" src="images/slide3.jpg" alt="Featured look 3" loading="lazy">
+    <img class="slide" src="images/slide4.jpg" alt="Featured look 4" loading="lazy">
+    <div class="dots"></div>
+  </section>
+</div>
+
+<div class="stage" id="stage">
+  <div class="scrim" id="scrim"></div>
+  <nav class="drawer" id="menu" aria-label="Main menu">
+    <div class="drawer-head"><img src="images/logo-brown.png" alt="Mkurugenzi"></div>
+    <ul class="nav">
+      <li style="--i:0"><div class="row"><a class="top" href="#home" aria-current="page"><span class="ico"><img src="images/home.png" alt=""></span>Home</a></div></li>
+      <li class="has-sub" style="--i:1">
+        <div class="row">
+          <a class="top" href="#collections"><span class="ico"><img src="images/collections.png" alt=""></span>Collections</a>
+          <button class="sub-toggle" type="button" aria-expanded="false" aria-controls="sub-collections" aria-label="Show collections"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        </div>
+        <div class="sub" id="sub-collections">
+          <ul>
+            <li><a href="#gents"><span class="ico"><img src="images/gents.png" alt=""></span>Gents</a></li>
+            <li><a href="#ladies"><span class="ico"><img src="images/ladies.png" alt=""></span>Ladies</a></li>
+            <li><a href="#unisex"><span class="ico"><img src="images/unisex.png" alt=""></span>Unisex</a></li>
+          </ul>
+        </div>
+      </li>
+      <li style="--i:2"><div class="row"><a class="top" href="#contact"><span class="ico"><img src="images/contactus.png" alt=""></span>Contact Us</a></div></li>
+    </ul>
+    <div class="drawer-foot">
+      <ul class="socials"><li><a href="https://www.youtube.com/@Mkurugenziii" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><img src="images/youtube.png" alt=""></a></li><li><a href="https://web.facebook.com/Mkurugenziii" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><img src="images/facebook.png" alt=""></a></li><li><a href="https://www.instagram.com/abelmutua" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="images/instagram.png" alt=""></a></li></ul>
+    </div>
+  </nav>
+</div>
+<script src="script.js"></script>
+<script src="crate.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+/* Mkurugenzi "Get in touch" section (index.html, above the footer). Link contact.css LAST. */
+html{scroll-behavior:smooth}
+.cx{
+  --brown:#5C4033; --ecru:#C2B280; --cream:#F6F1E4; --org:#B5651D; --ok:#2f7a4b;
+  background:transparent; color:var(--brown); font-family:"Inter",system-ui,sans-serif;
+  padding:56px 22px 70px; position:relative; overflow:hidden; scroll-margin-top:10px;
+}
+.cx *{box-sizing:border-box}
+
+/* ---------- heading ---------- */
+.cx-title{margin:0 0 34px;font:800 clamp(2.4rem,12vw,3.3rem)/1.1 "Montserrat",sans-serif;letter-spacing:-.02em;color:var(--brown)}
+.cx-title .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:6px}
+.cx-title .w>span{display:inline-block}
+.cx-title em{font-style:normal;background:var(--brown);color:var(--cream);padding:0 12px 4px;display:inline-block;transform:rotate(-1.5deg)}
+.cx-js .cx-title .w>span{transform:translateY(105%);transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.cx-js .cx-title.in .w>span{transform:none}
+.cx-js .cx-title.in .w:nth-child(2)>span{transition-delay:.15s}
+.cx-js .cx-title.in em{animation:cxWob 4s 1.2s ease-in-out infinite}
+@keyframes cxWob{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(1deg) translateY(-2px)}}
+
+/* ---------- details: plain ruled rows ---------- */
+.gt-info{margin-bottom:56px}
+.gt-item{position:relative;display:block;padding:22px 0 24px;color:var(--brown);text-decoration:none}
+.gt-item::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:rgba(92,64,51,.55);transform-origin:left}
+.cx-js .gt-item::before{transform:scaleX(0);transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.cx-js .gt-item.in::before{transform:none}
+.gt-info>:last-child{border-bottom:1px solid rgba(92,64,51,.55)}
+.gt-item small{display:block;margin-bottom:10px;font:800 .78rem/1 "Montserrat",sans-serif;letter-spacing:.2em;text-transform:uppercase}
+.gt-item strong{display:block;font:700 1.35rem/1.25 "Montserrat",sans-serif;letter-spacing:-.01em;overflow-wrap:anywhere}
+.gt-item small{display:flex;align-items:center;gap:10px}
+.gt-ic{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.gt-ic.wa{transform-origin:50% 90%;animation:cxRing 2.8s infinite}
+.gt-ic.ml{animation:cxBob 3s ease-in-out infinite}
+@keyframes cxRing{0%,70%,100%{transform:none}75%{transform:rotate(-14deg)}80%{transform:rotate(12deg)}85%{transform:rotate(-8deg)}90%{transform:rotate(5deg)}}
+@keyframes cxBob{0%,60%,100%{transform:none}75%{transform:translateY(-3px) rotate(-6deg)}}
+/* the number / email sit on a brown block, like "touch." and "Closed" */
+.gt-mark{margin:0}
+.gt-mark span{--mk:var(--brown);display:inline-block;color:var(--cream);padding:3px 12px 5px;
+  background:linear-gradient(var(--mk),var(--mk)) 0 0/100% 100% no-repeat;-webkit-box-decoration-break:clone;box-decoration-break:clone;
+  transition:transform .4s cubic-bezier(.3,1.4,.5,1)}
+.cx-js .gt-mark span{color:var(--brown);background-size:0% 100%;transition:background-size .9s cubic-bezier(.7,0,.2,1) .35s,color .4s .65s,transform .4s cubic-bezier(.3,1.4,.5,1)}
+.cx-js .gt-item.in .gt-mark span{background-size:100% 100%;color:var(--cream)}
+a.gt-item:active .gt-mark span,a.gt-item:focus-visible .gt-mark span{--mk:var(--org);transform:translateX(8px) rotate(-1.2deg)}
+a.gt-item:focus-visible{outline:none}
+@media (hover:hover){a.gt-item:hover .gt-mark span{--mk:var(--org);transform:translateX(8px) rotate(-1.2deg)}}
+
+/* service time: same type as the rest (Montserrat), no highlights */
+.cx-hours{list-style:none;margin:0;padding:0}
+.cx-hours li{position:relative;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:13px 0;border-top:1px dashed rgba(92,64,51,.4);font:700 1.1rem/1.25 "Montserrat",sans-serif;letter-spacing:-.01em}
+.cx-hours li:first-child{border-top:0}
+.cx-hours li b{font-weight:800}
+.cx-closed{display:inline-block;background:var(--brown);color:var(--cream);padding:2px 12px 4px;transform:rotate(-1.5deg)}
+.cx-js .cx-hours li{opacity:0;transform:translateX(-22px)}
+.cx-js .gt-item.in .cx-hours li{opacity:1;transform:none;transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1);transition-delay:calc(.35s + var(--i) * .16s)}
+.cx-js .cx-closed{opacity:0}
+.cx-js .gt-item.in .cx-closed{animation:cxStamp .6s 1.05s both cubic-bezier(.3,1.5,.5,1),cxWob 4s 2.1s ease-in-out infinite}
+@keyframes cxStamp{from{opacity:0;transform:rotate(-9deg) scale(1.7)}to{opacity:1;transform:rotate(-1.5deg) scale(1)}}
+
+/* ---------- form: transparent, square, underlined ---------- */
+.cx-form{position:relative;padding:0;background:transparent;border-radius:0}
+.cx-form h3{margin:0 0 6px;font:800 1.5rem/1.2 "Montserrat",sans-serif;letter-spacing:-.01em}
+.cx-sub{margin:0 0 16px;font:500 1.05rem/1.5 "Montserrat","Inter",sans-serif}
+.cx-prog{position:relative;height:3px;background:rgba(92,64,51,.2);margin:0 0 30px}
+.cx-prog i{position:absolute;left:0;top:0;bottom:0;width:calc(var(--p,0) * 100%);background:var(--brown);transition:width .6s cubic-bezier(.2,.8,.2,1)}
+.cx-prog i::after{content:"";position:absolute;right:-5px;top:-4px;width:11px;height:11px;background:var(--org);transform:rotate(45deg);opacity:calc(var(--p,0) * 10)}
+.fld{position:relative;display:block;margin-bottom:26px}
+.fld input,.fld textarea{display:block;width:100%;background:transparent;border:0;border-bottom:2px solid rgba(92,64,51,.45);border-radius:0;color:var(--brown);
+  font:600 1.1rem/1.3 "Inter",sans-serif;padding:26px 30px 10px 0;outline:none;resize:none;-webkit-appearance:none;appearance:none;transition:border-color .3s}
+.fld textarea{min-height:110px;padding-right:0}
+.fld span{position:absolute;left:0;top:24px;pointer-events:none;color:rgba(92,64,51,.75);font:600 1.05rem/1.2 "Inter",sans-serif;transform-origin:left top;transition:transform .3s cubic-bezier(.2,.8,.2,1),color .3s}
+.fld input:focus+span,.fld input:not(:placeholder-shown)+span,.fld textarea:focus+span,.fld textarea:not(:placeholder-shown)+span{transform:translateY(-22px) scale(.72);color:var(--brown);font-weight:800;letter-spacing:.06em}
+.fld::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--org);transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+.fld:focus-within::after{transform:scaleX(1)}
+.fld.ok input{border-bottom-color:var(--ok)}
+.fld.ok::before{content:"";position:absolute;right:6px;top:28px;width:7px;height:13px;border:solid var(--ok);border-width:0 3px 3px 0;transform:rotate(45deg);animation:cxTick .4s both}
+@keyframes cxTick{from{opacity:0;transform:rotate(45deg) scale(.3)}to{opacity:1;transform:rotate(45deg) scale(1)}}
+.fld .err{display:block;max-height:0;overflow:hidden;margin:0;color:#8a3b00;font:700 .85rem/1.3 "Inter",sans-serif;font-style:normal;transition:max-height .3s,margin .3s}
+.fld.bad .err{max-height:40px;margin-top:8px}
+.fld.bad input,.fld.bad textarea{border-bottom-color:#b3501a}
+.fld.shake{animation:cxShake .45s}
+@keyframes cxShake{20%{transform:translateX(-8px)}40%{transform:translateX(7px)}60%{transform:translateX(-5px)}80%{transform:translateX(3px)}}
+.seg-l{margin:4px 0 12px;font:800 .74rem/1 "Montserrat",sans-serif;letter-spacing:.22em;text-transform:uppercase}
+.seg{position:relative;display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--brown);margin-bottom:26px}
+.seg i{position:absolute;top:0;bottom:0;left:0;width:50%;background:var(--brown);transition:transform .4s cubic-bezier(.7,0,.2,1)}
+.seg[data-v="email"] i{transform:translateX(100%)}
+.seg button{position:relative;z-index:1;background:none;border:0;border-radius:0;padding:15px 6px;color:var(--brown);cursor:pointer;font:800 .85rem/1 "Inter",sans-serif;letter-spacing:.14em;text-transform:uppercase;transition:color .3s}
+.seg button[aria-pressed="true"]{color:var(--cream)}
+.send{position:relative;overflow:hidden;isolation:isolate;width:100%;display:flex;align-items:center;justify-content:space-between;padding:22px 24px;border:0;border-radius:0;cursor:pointer;
+  background:var(--brown);color:var(--cream);font:800 1rem/1 "Inter",sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.send::before{content:"";position:absolute;inset:0;background:var(--org);transform:translateX(-101%);transition:transform .5s cubic-bezier(.7,0,.2,1);z-index:-1}
+.send:active::before,.send:focus-visible::before{transform:none}
+@media (hover:hover){.send:hover::before{transform:none}}
+.send:focus-visible{outline:none}
+.send svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .3s}
+.send:active svg{transform:translate(4px,-4px) rotate(8deg)}
+.send.sending{pointer-events:none}
+.send.sending svg{animation:cxFly 1s forwards ease-in}
+.send.sending .tx{animation:cxFade2 1s forwards}
+@keyframes cxFly{0%{transform:none}35%{transform:translate(-6px,6px) rotate(-12deg)}100%{transform:translate(240px,-130px) rotate(10deg) scale(.4);opacity:0}}
+@keyframes cxFade2{to{opacity:0;transform:translateX(30px)}}
+.rip{position:absolute;border-radius:50%;background:rgba(255,255,255,.4);transform:scale(0);animation:cxRip .6s ease-out forwards;pointer-events:none}
+@keyframes cxRip{to{transform:scale(3.5);opacity:0}}
+.cx-done{position:relative;display:none;padding:10px 0 4px}
+.cx-form.sent .cx-fields{display:none}
+.cx-form.sent .cx-done{display:block}
+.cx-done svg{width:90px;height:90px;fill:none;stroke:var(--brown);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.cx-done circle{stroke-dasharray:190;stroke-dashoffset:190;animation:cxDraw .8s .1s forwards}
+.cx-done path{stroke-dasharray:50;stroke-dashoffset:50;animation:cxDraw .5s .8s forwards}
+@keyframes cxDraw{to{stroke-dashoffset:0}}
+.cx-done h4{margin:14px 0 8px;font:800 1.7rem/1.15 "Montserrat",sans-serif}
+.cx-done p{margin:0;max-width:30ch;font:500 1.05rem/1.55 "Montserrat","Inter",sans-serif}
+.cx-done a,.cx-done button{display:inline-block;margin:18px 12px 0 0;padding:13px 18px;border:2px solid var(--brown);border-radius:0;background:none;color:var(--brown);cursor:pointer;text-decoration:none;font:800 .78rem/1 "Inter",sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.conf{position:absolute;left:45px;top:60px;width:9px;height:9px;pointer-events:none;opacity:0;animation:cxConf 1.3s ease-out forwards}
+@keyframes cxConf{0%{opacity:1;transform:translate(0,0) rotate(0)}100%{opacity:0;transform:translate(var(--x),var(--y)) rotate(var(--r))}}
+
+/* ---------- scroll reveal ---------- */
+.cx-js .rv{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+.cx-js .rv.in{opacity:1;transform:none}
+
+.cx + .ft{margin-top:0}
+@media (prefers-reduced-motion:reduce){.cx *,.cx *::before,.cx *::after{animation:none!important;transition:none!important}}
